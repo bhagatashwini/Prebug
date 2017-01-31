@@ -1,0 +1,78 @@
+@import url('http://fonts.googleapis.com/css?family=Raleway:100italic,100,300italic,300,400italic,400,600italic,600,700italic,700');
+
+body{
+	font-family: Raleway, Verdana, Sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.boxed {
+	border: 1px solid;
+	color: #000099;
+}
+
+dl {
+	width: 100%;
+	overflow: hidden;
+	/* background: #ff0;*/
+	padding: 0;
+	margin: 0
+}
+
+dt {
+	float: left;
+	width: 20%;
+	font-weight: bold;
+	/* adjust the width; make sure the total of both is 100% */
+	/* background: #cc0;*/ 
+	padding : 0;
+	margin: 0;
+	padding: 0
+}
+
+dd {
+	float: left;
+	width: 80%;
+	/* adjust the width; make sure the total of both is 100% */
+	/* background: #dd0 */
+	padding: 0;
+	margin: 0
+}
+
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	border-radius: 10px;
+	-webkit-border-radius:15px 15px 15px 15px:;
+	/*  table-layout: fixed;*/
+	/* width: 200px; */
+	/* width: 100%;*/
+}
+
+th {
+	
+    border: 1px solid black;
+	border-collapse: collapse; 
+	width: auto;
+ 	color: #00004d;
+	background-color:#b3c6ff;  
+	/*#99b3ff  */
+	padding: 8px;
+
+}
+tr td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	white-space: nowrap;
+	width: auto;
+	padding: 8px;
+    text-align: left;
+
+}
+
+ tr:nth-child(even){
+        background-color:#e6e6e6;
+    }
+/* tr:nth-child(odd) {
+	background-color: #ffdab3;
+}  */

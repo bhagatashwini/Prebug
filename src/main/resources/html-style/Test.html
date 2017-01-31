@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Prebug</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body onload="load()">
+	<h1 align="center" ,style="color: #000099;">Prebug</h1>
+	<p align="center">
+		<i>Preventive Quality Assurance by SCM Analysis</i>
+	</p>
+	<div>
+		<h3 class="boxed">Project Development Statistic:</h3>
+		#foreach( $stat in $statlist )
+		<dl>
+		    <dt>Generated:</dt>
+			<dd>$stat.Generated</dd>
+			<dt>Report Period:</dt>
+			<dd>$stat.ReportPeriod</dd>
+			<dt>Total Files:</dt>
+			<dd>$stat.TotalFiles</dd>
+			<dt>Total Developers:</dt>
+			<dd>$stat.TotalAuthors</dd>
+			<dt>Total Commits:</dt>
+			<dd>$stat.TotalCommits</dd>
+		</dl>
+		#end
+	</div>
+
+	<div>
+		<h3 class="boxed">Files with the most Future Revisions:</h3>
+		<div>
+			<table>
+				<tr>
+					<th>Nr</th>
+					<th>File Name</th>
+					<th title="Futur Revision Count">FREVC</th>
+					<th title="Revision Count">REVC</th>
+					<th title="Developer Count">DEVC</th>
+					<th title="Churned Line Count">CLOC</th>
+					<th title="Total Lines">TOL</th>
+				</tr>
+				#set($count = 1) #foreach( $file in $list )
+				<tr>
+					<td>$count</td>
+					<td>$file.FileName</td>
+					<td>$file.FuturRevisionCount</td>
+					<td>$file.RevisionCount</td>
+					<td>$file.DeveloperCount</td>
+					<td>$file.ChurnedLineCount</td>
+					<td>$file.TotalLines</td>
+				</tr>
+				#set($count = $count + 1) #end
+			</table>
+		</div>
+	</div>
+</body>
+</html>
